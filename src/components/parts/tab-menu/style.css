@@ -1,0 +1,43 @@
+@import "../../../settings/_variables.css";
+
+.tab-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background: var(--BG_COLOR_L0);
+  border-top: 1px solid var(--BG_COLOR_L1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tab-menu #home {
+  cursor: pointer;
+}
+
+.tab-menu #home i,
+.tab-menu #serial i,
+.tab-menu #film i,
+.tab-menu #local i {
+  font-size: 2em;
+  color: var(--TEXT_COLOR_L2);
+}
+
+.tab-menu #home span,
+.tab-menu #serial span,
+.tab-menu #film span,
+.tab-menu #local span {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--TEXT_COLOR_L2);
+}
+
+.tab-menu #disney img {
+  width: 58px;
+  height: auto;
+}
+
+.active-link {
+  color: var(--TEXT_COLOR_L0) !important;
+}

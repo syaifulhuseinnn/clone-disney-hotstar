@@ -1,0 +1,24 @@
+@import "./_variables.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--BG_COLOR_L0);
+  font-size: 10px;
+  list-style: 1.15;
+  color: #fff;
+}
+
+body.preload {
+  animation: none !important;
+}
+
+body.preload * {
+  animation: none !important;
+}
+
+.search-open {
+  overflow: hidden;
+}

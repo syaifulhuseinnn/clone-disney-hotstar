@@ -1,0 +1,91 @@
+@import "../../../settings/_variables.css";
+
+.footer {
+  padding: 0 1rem;
+}
+
+footer .menu ul {
+  padding: 0;
+}
+
+footer .menu ul li {
+  display: inline;
+  margin: 0 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--TEXT_COLOR_L1);
+}
+
+footer .menu ul li:first-child {
+  margin: 0;
+}
+
+footer .connect-us span.fb {
+  background: #1a2233;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  text-align: center;
+}
+
+footer .connect-us span.fb:hover {
+  background: var(--BRAND_BLUE);
+  cursor: pointer;
+}
+
+footer .connect-us span.fb i {
+  font-size: 25px;
+  color: #b0c3d2;
+}
+
+footer .connect-us span.twitter {
+  background: #1a2233;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  text-align: center;
+}
+
+footer .connect-us span.twitter:hover {
+  background: var(--BRAND_BLUE);
+  cursor: pointer;
+}
+
+footer .connect-us span.twitter i {
+  font-size: 25px;
+  color: #b0c3d2;
+}
+
+footer .menu p {
+  font-size: 12px;
+  color: var(--TEXT_COLOR_L1);
+}
+
+.con {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--TEXT_COLOR_L2);
+}
+
+@media screen and (min-width: 768px) {
+  footer .menu p {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding: 0 5.3em;
+  }
+
+  footer .menu p {
+    width: 85%;
+  }
+
+  footer .app span.gplay {
+    display: inline-block;
+  }
+  footer .app span.appstore {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,9 @@
+.crs rect {
+  width: 90% !important;
+  height: 20% !important;
+  margin-top: 20px !important;
+}
+
+.test rect:nth-child(2) {
+  fill: royalblue !important;
+}

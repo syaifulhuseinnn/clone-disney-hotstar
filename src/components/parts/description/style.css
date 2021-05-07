@@ -1,0 +1,48 @@
+@import "../../../settings/_variables.css";
+
+#description .details-container {
+  border-top: 1px solid #adadad4d;
+}
+
+#description .title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+#description .genre {
+  color: var(--BRAND_BLUE);
+  font-weight: 400;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+#description span.season-episode {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--TEXT_COLOR_L1);
+  margin-bottom: 5px;
+}
+
+#description .overview {
+  font-size: 14px;
+  color: var(--TEXT_COLOR_L1);
+  font-weight: 500;
+}
+
+#description ul.action {
+  padding: 0;
+  margin: 0;
+}
+
+#description ul.action li {
+  display: inline;
+  margin-right: 10px;
+  color: var(--TEXT_COLOR_L2);
+  cursor: pointer;
+}
+
+#description ul.action li i {
+  font-size: 3em;
+}

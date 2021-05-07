@@ -1,0 +1,379 @@
+@import "../../../settings/_variables.css";
+
+div i.bx-menu {
+  font-size: 2.5em;
+  color: var(--TEXT_COLOR_L4);
+}
+
+div i.bx-menu:hover {
+  cursor: pointer;
+}
+
+div i.bx-search {
+  font-size: 2em;
+  color: var(--TEXT_COLOR_L4);
+}
+
+div i.bx-search:hover {
+  cursor: pointer;
+}
+
+div i.bx-chevron-right {
+  font-size: 2.5em;
+}
+
+#small {
+  position: sticky;
+  top: 0;
+  background-color: var(--BG_COLOR_L0);
+  z-index: 1;
+}
+
+.subscribe {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700 !important;
+  padding: 1px 5px;
+  background-color: var(--BRAND_BLUE);
+  margin: 10px 10px 0px 10px;
+}
+
+.sidebar-backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.219);
+  display: none;
+  opacity: 0;
+  z-index: 100;
+}
+
+.sidebar-backdrop.active {
+  -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  -o-animation: fadein 1s;
+  animation: fadein 1s;
+  display: block;
+  opacity: 1;
+}
+
+.sidebar {
+  width: 80%;
+  height: 100%;
+  background-color: var(--BG_COLOR_L1);
+  position: fixed;
+  left: -1000px;
+  top: 0;
+  transition: 0.5s;
+  z-index: 100;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  padding: 2em 0;
+}
+
+.sidebar ul li {
+  list-style-type: none;
+  padding-bottom: 2em;
+}
+
+.sidebar ul li:first-child,
+.sidebar ul li:nth-child(2) {
+  border-bottom: 1px solid var(--BG_COLOR_L2);
+}
+
+.sidebar #sign-in {
+  font-size: 1.7em;
+  font-weight: 500;
+}
+
+.sidebar span#notice {
+  font-size: 1.35em;
+  color: var(--TEXT_COLOR_L1);
+}
+
+.sidebar #watchlist {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.sidebar #genres span {
+  font-size: 1.5em;
+  color: var(--TEXT_COLOR_L1);
+  font-weight: 500;
+}
+
+.sidebar #genres i.bx-mask {
+  color: var(--TEXT_COLOR_L4);
+  font-size: 2em;
+}
+
+/* animations */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 323px) {
+  .logo-disney {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    left: -800px;
+  }
+
+  .subscribe {
+    font-size: 12px;
+    padding: 2px 10px;
+  }
+
+  #dropdown {
+    background: var(--BG_COLOR_L1);
+    position: fixed;
+    top: 56px;
+    left: 20px;
+    height: 0px;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  #dropdown.active {
+    height: 250px;
+  }
+
+  #dropdown ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  #dropdown ul li {
+    list-style: none;
+  }
+
+  #dropdown ul li:first-child {
+    padding-bottom: 2em;
+  }
+
+  #dropdown ul li:nth-child(2) {
+    padding-bottom: 1.5em;
+  }
+
+  #dropdown ul li #sign-in {
+    font-size: 1.6em;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  #dropdown ul li #notice {
+    font-size: 1.3em;
+  }
+
+  #dropdown ul #watchlist {
+    font-size: 1.4em;
+    font-weight: 500;
+    border-bottom: 1px solid var(--BG_COLOR_L2);
+  }
+
+  #dropdown ul #genres i {
+    font-size: 2em;
+    color: var(--TEXT_COLOR_L4);
+  }
+
+  #dropdown ul #genres span {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #dropdown {
+    top: 72px;
+  }
+
+  #large {
+    position: sticky;
+    top: 0;
+    background-color: var(--BG_COLOR_L0);
+    z-index: 10;
+  }
+
+  .nav-container {
+    padding: 5px 2em 10px 2em !important;
+  }
+
+  .nav-container #serial span,
+  .nav-container #film span,
+  .nav-container #disney span,
+  .nav-container #local span,
+  .nav-container #kids span {
+    font-size: 16px;
+    color: var(--TEXT_COLOR_L1);
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .nav-container #serial span:hover,
+  .nav-container #film span:hover,
+  .nav-container #disney span:hover,
+  .nav-container #local span:hover,
+  .nav-container #kids span:hover,
+  .nav-container #sign-in span:hover {
+    color: var(--TEXT_COLOR_L0);
+  }
+
+  .logo-disney {
+    width: 132px;
+    height: 62px;
+  }
+
+  .nav-container #search i {
+    right: 0;
+    top: 10px;
+  }
+
+  .nav-container #search input {
+    border: none;
+    background: none;
+    border-bottom: 1px solid var(--TEXT_COLOR_L4);
+    border-radius: 0;
+    padding: 0;
+    width: 240px;
+    box-shadow: none;
+    transition: 0.2s;
+  }
+
+  .nav-container #search input:focus {
+    width: 360px;
+    border-bottom: 1px solid var(--BRAND_BLUE);
+  }
+
+  .nav-container #search input:focus + #search-form {
+    display: block !important;
+  }
+
+  .nav-container #sign-in span {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--TEXT_COLOR_L1);
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-disney {
+    width: 115px;
+    height: 45px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .nav-container {
+    padding: 3px 5.3em !important;
+  }
+
+  .nav-container #sign-in {
+    margin-bottom: 2px;
+  }
+
+  .nav-container #sign-in span {
+    font-size: 14px;
+  }
+
+  .nav-container #serial,
+  .nav-container #film,
+  .nav-container #disney,
+  .nav-container #local,
+  .nav-container #kids {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .nav-container #serial span,
+  .nav-container #film span,
+  .nav-container #disney span,
+  .nav-container #local span,
+  .nav-container #kids span,
+  .nav-container #sign-in span {
+    font-size: 18px;
+  }
+
+  .logo-disney {
+    width: 135px;
+    height: 53px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .logo-disney {
+    width: 162px;
+    height: 62px;
+  }
+
+  .nav-container #serial span,
+  .nav-container #film span,
+  .nav-container #disney span,
+  .nav-container #local span,
+  .nav-container #kids span,
+  .nav-container #sign-in span {
+    font-size: 18px;
+  }
+
+  .nav-container #sign-in {
+    margin-bottom: 0;
+  }
+}
