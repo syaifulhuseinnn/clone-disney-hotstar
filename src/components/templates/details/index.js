@@ -5,11 +5,11 @@ import Footer from "../../parts/footer";
 import TabMenu from "../../parts/tab-menu";
 
 export default function Details(props) {
-  const { children, hero } = props;
+  const { children, hero, movie } = props;
   return (
     <React.Fragment>
       <Header />
-      <Hero hero={hero} />
+      <Hero hero={hero} movie={movie} />
       {children}
       <Footer />
       <TabMenu />

@@ -1,16 +1,14 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { Form, FormControl, Button } from "react-bootstrap";
 import logo from "../../../assets/images/disney-hotstar-logo-dark.svg";
 import kids from "../../../assets/images/kids.svg";
 import { HeaderContext } from "../header";
 
 export default function NavbarLarge() {
-  const {
-    dropdown,
-    setDropdown,
-    searchResultLg,
-    setSearchResultLg,
-  } = useContext(HeaderContext);
+  const { dropdown, setDropdown, setSearchResultLg } = useContext(
+    HeaderContext
+  );
 
   return (
     <div
@@ -22,7 +20,9 @@ export default function NavbarLarge() {
           <i className="bx bx-menu" onClick={() => setDropdown(!dropdown)}></i>
         </div>
         <div className="ml-lg-3 mr-lg-2">
-          <img src={logo} alt="" className="logo-disney" />
+          <Link to="/">
+            <img src={logo} alt="" className="logo-disney" />
+          </Link>
         </div>
         <div id="serial" className="px-xl-3 d-lg-none d-xl-block">
           <span>Serial</span>

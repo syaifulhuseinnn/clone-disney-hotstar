@@ -55,6 +55,75 @@
   font-weight: 500;
 }
 
+@media screen and (min-width: 768px) {
+  #seasons span.heading {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .next-season {
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    visibility: hidden;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(12, 17, 27, 0.7),
+      rgba(12, 17, 27, 0.9)
+    );
+    height: 100%;
+    width: 70px;
+    padding: 13% 0;
+  }
+
+  .prev-season {
+    z-index: 1;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    visibility: hidden;
+    height: 100%;
+    width: 70px;
+    background: linear-gradient(
+      to left,
+      transparent,
+      rgba(12, 17, 27, 0.7),
+      rgba(12, 17, 27, 0.9)
+    );
+    padding: 13% 0;
+  }
+
+  .season-list:hover .next-season,
+  .season-list:hover .prev-season {
+    visibility: visible;
+    animation: fade-in 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .next-season,
+  .prev-season {
+    padding: 11% 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #seasons span.heading {
+    padding: 0 50px;
+  }
+
+  #seasons .season-list .slick-list {
+    padding-left: 5em !important;
+  }
+
+  .next-season,
+  .prev-season {
+    padding: 11% 0;
+  }
+}
+
 @media screen and (min-width: 1920px) {
   #seasons span.heading {
     font-size: 28px;
@@ -63,5 +132,10 @@
 
   #seasons .season-list .slick-list {
     padding-left: 5em !important;
+  }
+
+  .next-season,
+  .prev-season {
+    padding: 10% 0;
   }
 }

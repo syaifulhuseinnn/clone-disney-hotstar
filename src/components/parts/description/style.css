@@ -1,9 +1,5 @@
 @import "../../../settings/_variables.css";
 
-#description .details-container {
-  border-top: 1px solid #adadad4d;
-}
-
 #description .title {
   font-size: 20px;
   font-weight: 500;
@@ -45,4 +41,14 @@
 
 #description ul.action li i {
   font-size: 3em;
+}
+
+@media screen and (min-width: 768px) {
+  #description .title {
+    font-size: 24px;
+  }
+
+  #description span.season-episode {
+    font-size: 16px;
+  }
 }
