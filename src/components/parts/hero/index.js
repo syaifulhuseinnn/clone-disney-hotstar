@@ -1,4 +1,6 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "./style.css";
 
 export default function Hero(props) {
@@ -22,10 +24,15 @@ export default function Hero(props) {
   return (
     <div className="position-relative my-2 my-lg-0 my-xl-2" id="hero">
       <div className="hero-container">
-        <img
+        {/* <img
           src={`https://image.tmdb.org/t/p/w780${hero.backdrop_path}`}
           alt=""
           className="img-fluid"
+        /> */}
+        <LazyLoadImage
+          src={`https://image.tmdb.org/t/p/w780${hero.backdrop_path}`}
+          alt={hero.original_name ?? hero.original_title}
+          effect="blur"
         />
         <div className="hero-overlay"></div>
         <div className="details">

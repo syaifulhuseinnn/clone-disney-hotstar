@@ -34,6 +34,7 @@ export const settings = {
         swipe: false,
         slidesToShow: 6,
         slidesToScroll: 3,
+        arrows: true,
       },
     },
     {

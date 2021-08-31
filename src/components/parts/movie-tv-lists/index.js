@@ -2,6 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import NextButton from "./nextButton";
 import PrevButton from "./prevButton";
 import { settings } from "./_settings";
@@ -82,11 +84,13 @@ function CustomSlide(props) {
     <div {...otherprops}>
       <Link to={`/${type}/${reformatTitle(title)}/${id}`}>
         <div className="thumbnail mr-2">
-          <img
-            src={`https://image.tmdb.org/t/p/w300${thumbnail}`}
-            alt=""
-            loading="lazy"
-          />
+          <div>
+            <LazyLoadImage
+              src={`https://image.tmdb.org/t/p/w300${thumbnail}`}
+              alt={title}
+              effect="blur"
+            />
+          </div>
           <div className="meta-details">
             <div className="description">
               <span className="d-block content-title">{title}</span>
