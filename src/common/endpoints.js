@@ -1,5 +1,5 @@
-export const baseUri = "https://api.themoviedb.org/3";
-export const apiKey = "abb29bea88e171807e8533520836bfce";
+export const baseUri = process.env.REACT_APP_BASE_URL;
+export const apiKey = process.env.REACT_APP_API_KEY;
 
 const tvNetworkDisneyNew = {
   params: "/discover/tv",
